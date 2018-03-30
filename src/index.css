@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #9C1908;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.extra-padding {
+  padding: .75rem;
+}
+
+label {
+  color: #025687;
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: .75rem;
+}
+
+.form-control:focus {
+  border-color: #9C1908;
+  box-shadow: 0 0 0 0.2rem rgba(108,117,125,.25)
+}
+
+/* -----Day Component------ */
+
+.card-body {
+  padding: 0;
+}
+
+.card-header {
+  background-color: #025687;
+  color: white;
+  font-weight: bold;
+}
+
+.sessions-open {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.sessions-open .form-group {
+  margin-bottom: 0;
+}
+
+.sessions-open .form-group label {
+  color: black;
+  font-weight: normal;
+}
+
+.mileage-open .form-group {
+  margin-bottom: 0;
+}
+
+.diem-open {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.diem-open .form-group label {
+  color: black;
+  font-weight: normal;
+}
+
+.other-open .form-group {
+  margin-bottom: 0;
+}
+
+.boxTitle {
+  color: #025687;
+  cursor: pointer;
+}
+
+.boxTitle:hover {
+  color: #9C1908;
+}
+
+.boxTitle span {
+  color: grey;
+}
+
+.add-day {
+  margin-top: 1rem;
+  font-size: .85rem;
+}
+
+.add-day span {
+  color: #025687;
+}
+.add-day span:hover {
+  color: #9C1908;
+}
+
+.add-day:hover {
+  color: #9C1908;
+}
