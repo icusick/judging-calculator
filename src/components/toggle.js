@@ -22,7 +22,7 @@ class ToggleBox extends Component {
   }
 
   render() {
-    const { title, children } = this.props;
+    const { title, children, sessions } = this.props;
     const { opened } = this.state;
     return (
       <div>
@@ -30,7 +30,7 @@ class ToggleBox extends Component {
         <div class="col boxTitle" onClick={this.toggleBox}>
         {title} <span><i class="fas fa-caret-down"></i></span>
         </div>
-        <div class="col-2 align-right">3</div>
+        <div class="col-2 align-right">"3"</div>
       </div>
       <div className="box">
         {opened && children && (
@@ -43,4 +43,5 @@ class ToggleBox extends Component {
     );
   }
 }
+
 export default ToggleBox;

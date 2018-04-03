@@ -44,6 +44,10 @@ label {
   font-weight: bold;
 }
 
+ul .list-wrapper {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
 .sessions-open {
   display: block;
   margin-top: 1rem;
