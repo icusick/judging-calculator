@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 {/* Need to know, how to pass data, how to get check boxes working
   article on transitions: https://medium.com/@joethedave/achieving-ui-animations-with-react-the-right-way-562fa8a91935
   ToDO:
   Route to different page after submit is clicked
   I installed react-router and react-router-dom, is this a problem? if so should I uninstall react-router?
-
+  Where do I put the react router? I can't figure this out, without breaking the whole thing.
   */}
 
 class Day extends Component {
@@ -44,6 +45,7 @@ class Day extends Component {
       </div>
       <div class="add-day"><span><i class="fas fa-plus-circle"></i> Add Day</span></div>
       <input type="submit" value="Submit" />
+      <Link className="nav-link" to="/fee">Caculate</Link>
       </div>
     );
   }
@@ -130,13 +132,14 @@ class Mileage extends Component {
 class Diem extends Component {
   constructor(props){
     super(props);
-    this.state = {diem: '0'};
+    this.state = {diem: 0};
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleInputChange(event) {
+    console.log(event.target.checked);
     {/*if box is checked add this.state.diem, if not is un checked subtract this.state.diem*/}
-    this.setState({diem: parseInt(event.target.value) + parseInt(this.state.diem)});
+    this.setState({diem: parseInt(event.target.value, 10)});
   }
 
   addDiem(){
@@ -153,15 +156,15 @@ class Diem extends Component {
             <div>{this.addDiem}</div>
               <div class="form-group">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value={this.state.diem} onChange={this.handleInputChange} value="15" />
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value={this.state.diem} onChange={this.handleInputChange} />
                   <label class="form-check-label" for="inlineRadio1">Breakfast</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value={this.state.diem} onChange={this.handleInputChange} value="15" />
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value={this.state.diem} onChange={this.handleInputChange} />
                   <label class="form-check-label" for="inlineRadio2">Lunch</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value={this.state.diem} onChange={this.handleInputChange} value="15" />
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value={this.state.diem} onChange={this.handleInputChange} />
                   <label class="form-check-label" for="inlineRadio3">Dinner</label>
                 </div>
               </div>
