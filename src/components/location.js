@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
 
 class Location extends Component {
-
-
   render() {
     return (
       <div className="name">
-        <div class="form-group">
-        <label class="location" for="location">Meet Location</label>
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Street" />
+        <div className="form-group">
+        <label className="location" htmlFor="location">Meet Location</label>
+          <div className="row">
+            <div className="col">
+              <input type="text" className="form-control" placeholder="Street" />
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="City" />
+          <div className="row">
+            <div className="col">
+              <input type="text" className="form-control" placeholder="City" />
             </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="State" />
+            <div className="col">
+              <input type="text" className="form-control" placeholder="State" />
             </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Zip" />
+            <div className="col">
+              <input type="text" className="form-control" placeholder="Zip" />
             </div>
           </div>
         </div>

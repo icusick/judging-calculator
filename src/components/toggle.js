@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 class ToggleBox extends Component {
   constructor(props) {
@@ -22,19 +21,19 @@ class ToggleBox extends Component {
   }
 
   render() {
-    const { title, children, sessions } = this.props;
+    const { title, children, formInput } = this.props;
     const { opened } = this.state;
     return (
       <div>
-      <div class="row">
-        <div class="col boxTitle" onClick={this.toggleBox}>
-        {title} <span><i class="fas fa-caret-down"></i></span>
+      <div className="row">
+        <div className="col boxTitle" onClick={this.toggleBox}>
+        {title} <span><i className="fas fa-caret-down"></i></span>
         </div>
-        <div class="col-2 align-right">"3"</div>
+        <div className="col-4 align-right"><div>{formInput}</div></div>
       </div>
       <div className="box">
         {opened && children && (
-          <div class="boxContent">
+          <div className="boxContent">
             {children}
           </div>
         )}
