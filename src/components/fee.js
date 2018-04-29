@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
+
 class Fee extends Component {
 
+
   render() {
+    console.log('Fee component ' + this.props.judges);
+    console.log(this.props.selectedJudge);
     return (
       <div className="container">
        <h1>Fee Calculation Page</h1>

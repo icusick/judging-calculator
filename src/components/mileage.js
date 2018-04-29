@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import ToggleBox from './toggle.js';
+import MileageCalc from './mileage-calc.js'
+
 
 class Mileage extends Component {
   constructor(props){
     super(props);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
+
+//google api key: AIzaSyCodRWSFX-atzFYcHTNJamzJNnoi-g-37k
 
   handleInputChange(event) {
     this.props.updateMileage(event.target.value);
@@ -21,6 +25,7 @@ class Mileage extends Component {
               <div className="col extra-padding">
                 <div className="form-group">
                   <input type="text" className="form-control" placeholder="Change mileage" value={this.props.mileage} onChange={this.handleInputChange} />
+                  <MileageCalc />
                 </div>
               </div>
             </div>
